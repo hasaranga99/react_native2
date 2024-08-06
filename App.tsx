@@ -5,12 +5,18 @@ import CustomLabel from './src/components/CustomLabel';
 function App(): React.JSX.Element {
   return (
     <View style={{alignItems: 'center'}}>
-      <CustomText fsize={60} a={'Hello'} b={'World'} />
+      <CustomText fsize={40} a='React' b='Native' />
     </View>
   );
 }
 
-function CustomText(props: any) {
+type CustomTextProps = {
+  fsize:number
+  a:string
+  b:string
+};
+
+function CustomText(props: CustomTextProps) {
   return (
     <Text style={{fontSize: props.fsize}}>
       {props.a} {props.b}
