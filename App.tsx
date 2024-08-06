@@ -5,15 +5,15 @@ import CustomLabel from './src/components/CustomLabel';
 function App(): React.JSX.Element {
   return (
     <View style={{alignItems: 'center'}}>
-      <CustomText fsize={40} a='React' b='Native' />
+      <CustomText fsize={40} a='React' />
     </View>
   );
 }
 
 type CustomTextProps = {
-  fsize:number
+  fsize?:number
   a:string
-  b:string
+  b?:string
 };
 
 function CustomText(props: CustomTextProps) {
