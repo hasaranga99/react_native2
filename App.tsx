@@ -6,20 +6,28 @@ import CustomLabel from './src/components/CustomLabel';
 
 function App(): React.JSX.Element {
 
-  console.log('App Component is rendered');
+  var textValue = ''
 
+  function ImageCatch() {
 
-  const [count, setCount] = useState(0);
-
-  function ChangeFunction() {
-    setCount(count + 1);
   }
 
+  function DisplayValue() {
+    console.log('Text Value = ' + textValue)
+  }
 
+  function OnTextChange(v: string) {
+    textValue = v;
+  }
   return (
     <View style={{ alignItems: 'center', marginTop: 40 }}>
-      <Text style={{ fontSize: 30 }}>Count is :{count}</Text>
-      <Button title='Change Count' onPress={ChangeFunction} />
+      <TextInput style={{
+        width: 300, height: 50, backgroundColor: 'black', color: 'white', borderRadius: 40,
+        marginVertical: 20, paddingHorizontal: 20, padding: 5
+
+      }} onChangeText={OnTextChange} />
+
+      <Button title='Click here' onPress={DisplayValue} />
     </View>
   );
 
