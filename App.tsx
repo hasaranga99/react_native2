@@ -8,7 +8,9 @@ function App(): React.JSX.Element {
 
   var textValue = ''
 
-  function ImageCatch() {
+  function ImageCatch1() {
+
+    console.log("Test_Test")
 
   }
 
