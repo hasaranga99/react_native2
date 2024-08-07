@@ -5,15 +5,11 @@ import CustomLabel from './src/components/CustomLabel';
 
 
 
-function Click (Value:any){
+function Click (x:number ,d:number){
   
-  console.log(Value);
- 
-  
-
+  console.log("Addition is :" +(x+d));
+  console.log("% is :" +(x%d));
 }
-
-
 
 function App(): React.JSX.Element {
   return (
@@ -38,7 +34,7 @@ function CustomText(props: CustomTextProps) {
 
 
     <Button title='Click Me' onPress={()=>{
-      Click('react native')
+      Click(10,50)
     }}/>
     
     </View>
