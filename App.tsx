@@ -38,11 +38,5 @@ function App(): React.JSX.Element {
         </View>
       </View>
       <View style={{ backgroundColor: 'blue', flex: 2 }}></View>
-    </View>
-
-  );
-
-}
-
-
-export default App;
+      4c104747
+      p;
