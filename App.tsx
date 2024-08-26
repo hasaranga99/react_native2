@@ -1,42 +1,38 @@
-import React, { useState } from 'react';
-import { Alert, Button, Text, TextInput, View } from 'react-native';
-import CustomLabel from './src/components/CustomLabel';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import LoginView from './src/screen/login/LoginView';
+import AdminDashboard from './src/screen/AdminDashboard/AdminDashboard';
+// Ensure this import is correct
 
+// Define the type for the Drawer Navigator
+
+
+const Stack: any = createNativeStackNavigator();
 
 
 function App(): React.JSX.Element {
 
 
-
   return (
-    // <View style={{ backgroundColor: 'yellow', flex: 1, flexDirection: 'column' }}>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name={"Start"} component={LoginView} />
+        <Stack.Screen name={"Login"} component={AdminDashboard} />
+        <Stack.Screen name={"dashboard"} component={LoginView} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 
-    //   <View style={{ backgroundColor: 'black', flex: 1 }}>
-    //   </View>
-    //   <View style={{ backgroundColor: 'green', flex: 1.5, flexDirection: 'row' }}>
-    //     <View style={{ backgroundColor: 'red', flex: 1 }}></View>
-    //     <View style={{ backgroundColor: 'yellow', flex: 1, flexDirection: 'column' }}>
-    //       <View style={{ backgroundColor: 'green', flex: 1 }}></View>
-    //       <View style={{ backgroundColor: 'yellow', flex: 1 }}></View>
-    //     </View>
+}
 
-    //   </View>
-    // </View>
+export default App;
 
-    <View style={{ backgroundColor: 'yellow', flex: 1 }}>
-      <View style={{ backgroundColor: 'black', flex: 2 }}></View>
-      <View style={{ backgroundColor: 'red', flex: 3, flexDirection: 'row' }}>
-        <View style={{ backgroundColor: 'red', flex: 1 }}></View>
-        <View style={{ backgroundColor: 'green', flex: 1, flexDirection: 'column' }}>
-          <View style={{ backgroundColor: 'green', flex: 1, flexDirection: 'row' }}>
-            <View style={{ backgroundColor: '#000', flex: 1 }}></View>
-            <View style={{ backgroundColor: '#666', flex: 1 }}></View>
-            <View style={{ backgroundColor: '#fff', flex: 1 }}></View>
 
-          </View>
-          <View style={{ backgroundColor: 'yellow', flex: 1 }}></View>
-        </View>
-      </View>
-      <View style={{ backgroundColor: 'blue', flex: 2 }}></View>
-      4c104747
-      p;
+
+
+
+function createNativeStackNavigator() {
+  throw new Error('Function not implemented.');
+}
+
